@@ -1,0 +1,1 @@
+docker run -d --name baseball -v /Users/juanzinser/Documents/Workshop/baseball/src/teams:/docker-entrypoint-initdb.d/    -e POSTGRES_PASSWORD=Pass2020! -p 5435:5432    postgres
