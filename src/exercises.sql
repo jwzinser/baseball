@@ -37,7 +37,7 @@ select year, name,miny, n from (select   wsw.year, wsw.name, wswi.year as year2,
    
 -- same but mysql 5.7
 create or replace view cw3 as
-select year, name,miny, n from (select   wsw.year, wsw.name,
+select year, name, miny, n from (select   wsw.year, wsw.name,
   sum( case when wsw.name=wswi.name then 1 else 0 end )  as n,
   min(case when wswi.name=wsw.name then wswi.year else null end)  as miny
    from wsw cross join wsw as wswi 
